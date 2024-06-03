@@ -41,7 +41,7 @@ class MessageController extends Controller
 
         Mail::to($request->input('email'))->send(new MessageNotification($token, $photoPath));
 
-        return redirect('/')->with('status', 'Message envoyé avec succès!');
+        return redirect('/')->with('status', 'Votre Message à été envoyé avec succès! 😀 ');
     }
 
     public function show($token)
